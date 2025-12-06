@@ -1,0 +1,89 @@
+@import '../../styles/globalStyles.module.scss';
+
+.heroSection {
+    height: 85vh;
+    padding-top: calc(4rem + $navbar-height);
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    &::after {
+        content: '';
+        width: 1200px;
+        height: 1200px;
+        background-size: cover;
+        background-position: center center;
+        background-repeat: repeat;
+        background-image: url("data:image/svg+xml;utf8,%3Csvg viewBox=%220 0 1000 1000%22 xmlns=%22http:%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cdefs%3E%3ClinearGradient id=%22b%22 gradientTransform=%22rotate(360 .5 .5)%22%3E%3Cstop offset=%220%25%22 stop-color=%22%233A98B9%22%2F%3E%3Cstop offset=%22100%25%22 stop-color=%22%23e9fcff%22%2F%3E%3C%2FlinearGradient%3E%3CclipPath id=%22a%22%3E%3Cpath fill=%22currentColor%22 d=%22M781.5 647Q596 794 384.5 766T154 486.5q-19-251.5 213.5-273t416 132.5q183.5 154-2 301Z%22%2F%3E%3C%2FclipPath%3E%3C%2Fdefs%3E%3Cg clip-path=%22url(%23a)%22%3E%3Cpath fill=%22url(%23b)%22 d=%22M781.5 647Q596 794 384.5 766T154 486.5q-19-251.5 213.5-273t416 132.5q183.5 154-2 301Z%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+        opacity: 0.5;
+        position: absolute;
+        top: -450px;
+        right: -450px;
+        z-index: 15;
+    }
+    &::before{
+        content: '';
+        width: 600px;
+        height: 600px;
+        background-image: url('./../../assets/kids.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        position: absolute;
+        bottom: 0;
+        right: 10rem;
+        z-index: 20;
+        @media screen and (min-width: 1024px) and (max-width: 1367px)  {
+            right: 3rem;
+        }
+    }
+}
+
+.heroSectionWrapper {
+    padding: 4rem 0 3rem;
+    display: flex;
+    gap: 3rem;
+
+    .heroSectionContentWrapper {
+        max-width: 60%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+
+        .heroSectionCaption {
+            display: block;
+            color: var(--font-color);
+            font-size: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .heroTitle {
+            font-size: 2.25rem;
+            color: $primary-color;
+            line-height: 1.35;
+            margin-bottom: 1.25rem;
+
+            .highlight {
+                display: inline-block;
+                background-color: $primary-color;
+                padding: 0 0.5rem;
+                font-size: inherit;
+                color: $background-color;
+            }
+        }
+
+        .heroSectionContent {
+            font-size: 1.25rem;
+            line-height: 1.5;
+
+            &+button {
+                margin-top: 2rem;
+            }
+        }
+
+        @media screen and (min-width: 1024px) and (max-width: 1367px)  {
+            max-width: 50%;
+        }
+    }
+}

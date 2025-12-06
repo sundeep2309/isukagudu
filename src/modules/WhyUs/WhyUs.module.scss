@@ -1,0 +1,30 @@
+@import './../../styles/globalStyles.module.scss';
+
+.servicesList {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin: 2rem 0;
+
+    li {
+        padding-left: 2rem;
+        line-height: 1.5;
+        position: relative;
+        list-style: none;
+
+        &::before {
+            content: '';
+            display: inline-block;
+            width: 1.5rem;
+            height: 1.5rem;
+            background-image: url('../../assets/check-badge.svg');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    }
+}

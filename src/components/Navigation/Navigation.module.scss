@@ -1,0 +1,56 @@
+@import './../../styles/globalStyles.module.scss';
+
+.navigation {
+    width: 100%;
+    height: $navbar-height;
+    background-color: transparent;
+    position: fixed;
+    z-index: 50;
+
+    &.navScrolled {
+        background-color: rgba(255, 255, 255, 0.75);
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(10px);
+    }
+
+    .navigationContainer {
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+
+    .navigationWrapper {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+
+        .logoWrapper {
+            height: 60px;
+            display: flex;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .menuItems {
+            flex: 1;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+
+            .menuItem {
+                font-weight: 500;
+                color: $primary-color;
+                margin: 0 15px;
+
+                &:hover {
+                    color: $secondary-color;
+                }
+            }
+        }
+    }
+}

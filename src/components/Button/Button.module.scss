@@ -1,0 +1,18 @@
+@import '../../styles/globalStyles.module.scss';
+
+.buttonWrapper{
+    display: inline-block;
+    background-color: transparent;
+    border: 2px solid $primary-color;
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+    font-size: 1.25rem;
+    color: $primary-color;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    &:hover{
+        background-color: $primary-color;
+        color: $background-color;
+    }
+}

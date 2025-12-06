@@ -1,0 +1,55 @@
+@import './../../styles/globalStyles.module.scss';
+
+.servicesWrapper{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 -1.5rem;
+    .serviceCard{
+        width: calc(100% / 3 - 3rem);
+        background-color: $white-color;
+        border: 1px solid rgb(58 152 185 / 45%);
+        border-radius: 1rem;
+        // box-shadow: 0 4px 20px 2px rgb(58 152 185 / 7%);
+        padding: 1.5rem;
+        text-align: center;
+        margin: 3rem 1.5rem 0;
+        h3{
+            font-size: 1.25rem;
+            font-weight: 500;
+            color: $secondary-color;
+            margin: 0 0 1rem;
+        }
+        p{
+            line-height: 1.65;
+        }
+    }
+}
+
+.servicesBGIcon{
+    content: '';
+    width: 150px;
+    height: 150px;
+    background: url('./../../assets/kid_and_board.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    bottom: -2rem;
+    left: 3.5rem;
+    opacity: 0.35;
+    animation: movement 10s linear infinite;
+}
+
+@keyframes movement {
+    0%{
+        transform: translateX(0);
+    }
+    50%{
+        transform: translateX(200px);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
